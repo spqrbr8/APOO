@@ -1,7 +1,0 @@
-Masina B123XYZ 8 12
-Motocicleta Q765CEW 9 23
-Camion C125XYN 10 14
-Masina B133XYZ 10 11
-Masina U123XYZ 0 23
-Masina S523HYZ 9 19
-Bicicleta - 10 11
