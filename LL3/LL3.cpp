@@ -114,6 +114,18 @@ public:
     string getTip() override { return "Bicicleta"; }
 };
 
+void AfisareVehicule(vector<Vehicul*> vehicule){
+    cout << " Tip\t\t" << "Nr. inmatriculare\t" << "Timpul petrecut\t\t" << "Tarif" << endl;
+    cout << "-----------------------------------------------------------------------" << endl;
+    int count = 1;
+    for (auto vehicul : vehicule)
+    {
+        cout << count << ". " << vehicul->getTip() << "\t\t" << vehicul->getNrInmatriculare() << "\t\t"
+         << vehicul->calculeazaTimp() << " ore\t\t\t" << vehicul->calculeazaTarif() << " lei" << endl;
+        
+        count++;
+    }
+}
 
 int main(){
     
@@ -165,17 +177,8 @@ int main(){
     //     v->AfisareInfo();
     //     delete v;
     // }
-    
-    cout << " Tip\t\t" << "Nr. inmatriculare\t" << "Timpul petrecut\t\t" << "Tarif" << endl;
-    cout << "-----------------------------------------------------------------------" << endl;
-    int count = 1;
-    for (auto vehicul : vehicule)
-    {
-        cout << count << ". " << vehicul->getTip() << "\t\t" << vehicul->getNrInmatriculare() << "\t\t"
-         << vehicul->calculeazaTimp() << " ore\t\t\t" << vehicul->calculeazaTarif() << " lei" << endl;
-        
-        count++;
-    }
+
+    AfisareVehicule(vehicule);
     
     fin.close();
 
